@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/random-math-fact-app/static/css/main.be44069f.css",
-    "main.js": "/random-math-fact-app/static/js/main.3f343b94.js",
-    "static/media/click.png": "/random-math-fact-app/static/media/click.ba65bab8ff62dfe05b91.png",
-    "index.html": "/random-math-fact-app/index.html",
-    "main.be44069f.css.map": "/random-math-fact-app/static/css/main.be44069f.css.map",
-    "main.3f343b94.js.map": "/random-math-fact-app/static/js/main.3f343b94.js.map"
+    "main.css": "/random-fact-app/static/css/main.3664ac4d.css",
+    "main.js": "/random-fact-app/static/js/main.9e3a23b7.js",
+    "static/media/click.png": "/random-fact-app/static/media/click.ba65bab8ff62dfe05b91.png",
+    "index.html": "/random-fact-app/index.html",
+    "main.3664ac4d.css.map": "/random-fact-app/static/css/main.3664ac4d.css.map",
+    "main.9e3a23b7.js.map": "/random-fact-app/static/js/main.9e3a23b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.be44069f.css",
-    "static/js/main.3f343b94.js"
+    "static/css/main.3664ac4d.css",
+    "static/js/main.9e3a23b7.js"
   ]
 }
