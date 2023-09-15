@@ -27,7 +27,7 @@ const RandomMathFact = () => {
     const lastFacts = facts.slice(0, -1);
     const [newFact, setNewFact] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [columns, setColumns] = useState<Column[]>([
+    const [columns] = useState<Column[]>([
         {
             title: "ID",
             dataIndex: "id",
