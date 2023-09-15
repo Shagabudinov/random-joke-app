@@ -1,5 +1,5 @@
 import "./App.css";
-import RandomMathFact from "./components/randomMathFact";
+import RandomMathFact from "./components/randomJoke";
 import Header from "./components/Header";
 import { ConfigProvider } from "antd";
 

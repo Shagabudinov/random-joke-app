@@ -2,30 +2,29 @@ import React, { useState } from "react";
 import { Button, Table, Spin } from "antd";
 import { useAppDispatch, useAppSelector } from "../customHooks/hooks";
 import {
-    factToHistory,
-    randomFact,
-    deleteFactFromHistory,
-} from "../slices/mathFactsSlice";
-import { CloseOutlined } from '@ant-design/icons';
-import './randomMathFact.css';
+    jokeToHistory,
+    randomJoke,
+    deleteJokeFromHistory,
+} from "../slices/jokesSlice";
+import { CloseOutlined } from "@ant-design/icons";
+import './randomJoke.css'
 // @ts-ignore
 import cursor from "../img/click.png";
-
 
 interface Column {
     title: string;
     dataIndex: string;
     date: string;
-    render?: (text: any, record: randomFact) => React.ReactNode;
+    render?: (text: any, record: randomJoke) => React.ReactNode;
     width?: number;
 }
 
-const RandomMathFact = () => {
+const RandomMathJoke = () => {
     const dispatch = useAppDispatch();
-    const facts = useAppSelector((state) => state.facts);
+    const jokes = useAppSelector((state) => state.jokes);
 
-    const lastFacts = facts.slice(0, -1);
-    const [newFact, setNewFact] = useState<string>("");
+    const lastJokes = jokes.slice(0, -1);
+    const [newJoke, setNewJoke] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [columns] = useState<Column[]>([
         {
@@ -35,43 +34,43 @@ const RandomMathFact = () => {
             width: 20,
         },
         {
-            title: "Random Fact",
-            dataIndex: "randomFact",
-            date: "randomFact",
+            title: "Random Joke",
+            dataIndex: "randomJoke",
+            date: "randomJoke",
         },
         {
             title: "Date",
             dataIndex: "correctDate",
             date: "correctDate",
-            width: 160
+            width: 160,
         },
         {
             title: "",
             dataIndex: "action",
             date: "action",
             width: 10,
-            render: (_, fact: any) => (
-                <Button type="link" onClick={() => handleDelete(fact.id)}>
+            render: (_, Joke: any) => (
+                <Button type="link" onClick={() => handleDelete(Joke.id)}>
                     <CloseOutlined />
                 </Button>
             ),
         },
     ]);
-//https://geek-jokes.sameerkumar.website/api?format=json
-//http://numbersapi.com/random/math
-    const handleGetNewRandomFact = () => {
+    //https://geek-jokes.sameerkumar.website/api?format=json
+    //http://numbersapi.com/random/math
+    const handleGetNewRandomJoke = () => {
         setIsLoading(true);
-        fetch(`https://geek-jokes.sameerkumar.website/api?format=json`)
+        fetch(`https://geek-jokes.sameerkumar.website/api?format=text`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`Error ${response.status}`);
                 }
                 return response.text();
             })
-            .then((fact) => {
-                setNewFact(fact);
+            .then((Joke) => {
+                setNewJoke(Joke);
                 setIsLoading(false);
-                dispatch(factToHistory(fact));
+                dispatch(jokeToHistory(Joke));
             })
             .catch((error) => {
                 throw new Error(error);
@@ -79,43 +78,43 @@ const RandomMathFact = () => {
     };
 
     const handleDelete = (id: number) => {
-        dispatch(deleteFactFromHistory(id));
+        dispatch(deleteJokeFromHistory(id));
     };
 
     return (
-        <div className="fact-container">
-            <div className="fact__new-fact">
-                <div className="fact__random-fact">
-                    <h2 className="fact__random-fact-text">
-                        {newFact ? newFact : "Here can be a random fact"}
+        <div className="Joke-container">
+            <div className="Joke__new-Joke">
+                <div className="Joke__random-Joke">
+                    <h2 className="Joke__random-Joke-text">
+                        {newJoke ? newJoke : "Here can be a random Joke"}
                     </h2>
                 </div>
-                <div className="fact__random-fact-button">
+                <div className="Joke__random-Joke-button">
                     <img src={cursor} alt="" className="cursor-image" />
                     <Button
-                        className="fact__button"
+                        className="Joke__button"
                         onClick={() => {
-                            handleGetNewRandomFact();
+                            handleGetNewRandomJoke();
                         }}
                     >
                         {isLoading ? (
                             <Spin />
                         ) : (
                             <p className="button-text">
-                                Generate new random fact
+                                Generate new random Joke
                             </p>
                         )}
                     </Button>
                 </div>
             </div>
             <h2 className="h2">History</h2>
-            {facts.length > 1 ? (
+            {jokes.length > 1 ? (
                 <Table
                     className="table-history"
                     columns={columns}
-                    dataSource={lastFacts}
-                    pagination={{pageSize: 3}}
-                    rowKey={(fact) => fact.date}
+                    dataSource={lastJokes}
+                    pagination={{ pageSize: 3 }}
+                    rowKey={(Joke) => Joke.date}
                 />
             ) : (
                 <p className="unabled-text">no history yet...</p>
@@ -124,4 +123,4 @@ const RandomMathFact = () => {
     );
 };
 
-export default RandomMathFact;
+export default RandomMathJoke;

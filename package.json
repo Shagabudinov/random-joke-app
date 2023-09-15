@@ -2,7 +2,7 @@
     "name": "redux-ts-test-app",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://shagabudinov.github.io/random-math-fact-app/",
+    "homepage": "https://shagabudinov.github.io/random-fact-app/",
     "dependencies": {
         "@ant-design/icons": "^5.2.6",
         "@reduxjs/toolkit": "^1.9.5",
