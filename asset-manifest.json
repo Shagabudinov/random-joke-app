@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/random-fact-app/static/css/main.3664ac4d.css",
-    "main.js": "/random-fact-app/static/js/main.9e3a23b7.js",
-    "static/media/click.png": "/random-fact-app/static/media/click.ba65bab8ff62dfe05b91.png",
-    "index.html": "/random-fact-app/index.html",
-    "main.3664ac4d.css.map": "/random-fact-app/static/css/main.3664ac4d.css.map",
-    "main.9e3a23b7.js.map": "/random-fact-app/static/js/main.9e3a23b7.js.map"
+    "main.css": "/random-joke-app/static/css/main.3664ac4d.css",
+    "main.js": "/random-joke-app/static/js/main.55a632c5.js",
+    "static/media/click.png": "/random-joke-app/static/media/click.ba65bab8ff62dfe05b91.png",
+    "index.html": "/random-joke-app/index.html",
+    "main.3664ac4d.css.map": "/random-joke-app/static/css/main.3664ac4d.css.map",
+    "main.55a632c5.js.map": "/random-joke-app/static/js/main.55a632c5.js.map"
   },
   "entrypoints": [
     "static/css/main.3664ac4d.css",
-    "static/js/main.9e3a23b7.js"
+    "static/js/main.55a632c5.js"
   ]
 }
