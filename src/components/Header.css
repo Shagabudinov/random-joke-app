@@ -1,0 +1,15 @@
+.header {
+    height: 100px;
+    margin-left: 8%;
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.header span{
+    display: inline;
+    text-shadow: 4px 4px 8px rgba(171, 170, 190, 0.6);
+}
+
+.text-silver {
+    color:rgb(147, 147, 147)
+}

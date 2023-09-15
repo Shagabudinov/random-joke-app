@@ -1,0 +1,86 @@
+.fact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.h2 {
+    margin: 4% 0 12px;
+    align-self: flex-start;
+    opacity: 0.8;
+}
+
+.fact__new-fact {
+    width: 800px;
+    height: 400px;
+    background-color: rgb(147, 147, 147);
+    border-radius: 64px;
+    border: 4px solid #000;
+}
+
+.fact__random-fact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.fact__random-fact-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 8%;
+    height: 300px;
+    font-size: 34px;
+}
+
+.fact__random-fact-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-top: 4px solid #000;
+}
+
+.fact__button {
+    width: 400px;
+    height: 40px;
+}
+
+.button-text {
+    font-size: 18px;
+}
+
+.facts-history {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.table-history {
+    width: 1024px;
+    background-color: rgb(147, 147, 147);
+    border-radius: 12px;
+}
+
+.ant-table-head {
+    background-color: rgb(147, 147, 147);
+}
+
+.unabled-text {
+    opacity: 0.5;
+}
+
+.cursor-image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 134px;
+    bottom: -40px;
+    z-index: 2;
+}
+
+

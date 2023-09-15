@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import RandomMathFact from "./components/randomMathFact";
+import Header from "./components/Header";
+import { ConfigProvider } from "antd";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const customTheme = {
+  components: {
+      Table: {
+          headerBg: "rgb(158, 158, 158)",
+          fontWeightStrong: 600,
+      },
+      Button: {
+      }
+  },
+  token: {
+      borderRadius: 100,
+      colorPrimaryHover: 'rgb(129, 129, 129)',
+      colorPrimary: 'rgb(129, 129, 129)'
+  },
+};
+
+const App = () => {
+    return (
+        <div className="App">
+            <Header />
+            <ConfigProvider theme={customTheme}>
+                <RandomMathFact />
+            </ConfigProvider>
+        </div>
+    );
+};
 
 export default App;
