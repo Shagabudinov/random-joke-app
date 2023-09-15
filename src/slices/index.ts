@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit"
-import counterReducer from './counterSlice'
 import mathFactsReducer from './mathFactsSlice'
 
 const store = configureStore({
     reducer: {
-        counter: counterReducer,
         facts: mathFactsReducer
     },
 })

@@ -7,7 +7,7 @@ import {
     deleteFactFromHistory,
 } from "../slices/mathFactsSlice";
 import { CloseOutlined } from '@ant-design/icons';
-import './randomMathFact.css'
+import './randomMathFact.css';
 // @ts-ignore
 import cursor from "../img/click.png";
 
@@ -57,10 +57,11 @@ const RandomMathFact = () => {
             ),
         },
     ]);
-
+//https://geek-jokes.sameerkumar.website/api?format=json
+//http://numbersapi.com/random/math
     const handleGetNewRandomFact = () => {
         setIsLoading(true);
-        fetch("http://numbersapi.com/random/math")
+        fetch(`https://geek-jokes.sameerkumar.website/api?format=json`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`Error ${response.status}`);
