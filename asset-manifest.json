@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/random-math-fact-app/static/css/main.be44069f.css",
+    "main.js": "/random-math-fact-app/static/js/main.5e68e0a1.js",
+    "static/media/click.png": "/random-math-fact-app/static/media/click.ba65bab8ff62dfe05b91.png",
+    "index.html": "/random-math-fact-app/index.html",
+    "main.be44069f.css.map": "/random-math-fact-app/static/css/main.be44069f.css.map",
+    "main.5e68e0a1.js.map": "/random-math-fact-app/static/js/main.5e68e0a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be44069f.css",
+    "static/js/main.5e68e0a1.js"
+  ]
+}
